@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/YammieMeetup/static/css/main.e5c3c708.chunk.css",
+    "main.js": "/YammieMeetup/static/js/main.3fc32c25.chunk.js",
+    "main.js.map": "/YammieMeetup/static/js/main.3fc32c25.chunk.js.map",
+    "runtime-main.js": "/YammieMeetup/static/js/runtime-main.19c5013d.js",
+    "runtime-main.js.map": "/YammieMeetup/static/js/runtime-main.19c5013d.js.map",
+    "static/js/2.0ca2c46e.chunk.js": "/YammieMeetup/static/js/2.0ca2c46e.chunk.js",
+    "static/js/2.0ca2c46e.chunk.js.map": "/YammieMeetup/static/js/2.0ca2c46e.chunk.js.map",
+    "index.html": "/YammieMeetup/index.html",
+    "precache-manifest.9642e7a16c6a09273524d1a683c46604.js": "/YammieMeetup/precache-manifest.9642e7a16c6a09273524d1a683c46604.js",
+    "service-worker.js": "/YammieMeetup/service-worker.js",
+    "static/css/main.e5c3c708.chunk.css.map": "/YammieMeetup/static/css/main.e5c3c708.chunk.css.map",
+    "static/js/2.0ca2c46e.chunk.js.LICENSE.txt": "/YammieMeetup/static/js/2.0ca2c46e.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19c5013d.js",
+    "static/js/2.0ca2c46e.chunk.js",
+    "static/css/main.e5c3c708.chunk.css",
+    "static/js/main.3fc32c25.chunk.js"
+  ]
+}

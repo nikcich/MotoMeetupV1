@@ -88,6 +88,50 @@ body{
     background-color: #7e7a7a;
 }
 
+.FindPeople{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+#FindPeople p{
+    font-size: 2vw;
+    color: #f5eded;
+    text-align: center;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    margin-top: 4vw;
+}
+
+
+.Radius{
+    display: flex;
+    height: 3vw;
+    width: 80%;
+    border-width: 0.3vw;
+    border-radius: 1vw;
+    font-size: 2vw;
+    text-align: center;
+    border-color: #d72323;
+    margin-left: 9.5%;
+}
+
+.FindPpl{
+    margin-top: 1vw;
+    margin-left: 10%;
+    height: 3vw;
+    width: 80%;
+    border-width: 0.3vw;
+    border-radius: 1vw;
+    border-color: #d72323;
+    font-size: 2vw;
+    text-align: center;
+}
+
+b{
+    word-wrap: break-word;
+}
+
 
 
 
@@ -187,6 +231,55 @@ body{
     
     .AddToList:hover{
         background-color: #c7c2c2;
+    }
+
+
+
+
+
+    .FindPeople{
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+    }
+    
+    #FindPeople p{
+        font-size: 2vw;
+        color: #f5eded;
+        text-align: center;
+        margin-right: 3vw;
+        margin-left: 3vw;
+        margin-top: 4vw;
+    }
+    
+    
+    .Radius{
+        display: flex;
+        height: 5.5vw;
+        width: 90%;
+        border-width: 0.3vw;
+        border-radius: 1vw;
+        font-size: 5vw;
+        text-align: center;
+        border-color: #d72323;
+        margin-left: 4.5%;
+    }
+    
+    .FindPpl{
+        margin-top: 1vw;
+        margin-left: 5%;
+        height: 6vw;
+        width: 90%;
+        border-width: 0.3vw;
+        border-radius: 1vw;
+        border-color: #d72323;
+        font-size: 4vw;
+        text-align: center;
+    }
+    
+    b{
+        font-size: 5vw;
+        word-wrap: break-word;
     }
 
 }

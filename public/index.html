@@ -184,19 +184,73 @@
       }
     </script>
     
+    <div id = "FindPeople">
+      <p><b>--FIND MEMBERS NEAR ME--</b> <span id="myLabel1"></span></p>
+      <input type="text" class="Radius" id = "Radius" placeholder="Enter radius in miles" />
+      <input type="button" class="FindPpl" value="Find People" onclick="findPeople()"/>
+      <p><b id = "results">Members will appear here</b> <span id="myLabel2"></span></p>
+    </div>
 
+    <script type="text/javascript">
 
+      function toRadians(n){
+        var pi = Math.PI;
+        return n * (pi/180);
+      }
 
+      function getDist(lat1, lat2, lon1, lon2){
+        var lon1 = toRadians(lon1); 
+        var lon2 = toRadians(lon2); 
+        var lat1 = toRadians(lat1); 
+        var lat2 = toRadians(lat2); 
 
+        var dlon = lon2 - lon1;  
+        var dlat = lat2 - lat1; 
+        var a = Math.pow(Math.sin(dlat / 2), 2) 
+                 + Math.cos(lat1) * Math.cos(lat2) 
+                 * Math.pow(Math.sin(dlon / 2),2); 
+              
+        var c = 2 * Math.asin(Math.sqrt(a)); 
 
-  
+        var r = 3956;
 
-    
+        return(c*r);
+      }
 
-    
+      function findPeople(){
+        
+        var radius = document.getElementById("Radius").value;
+        var latVal = document.getElementById("latitude_view").innerHTML;
+        var LongVal = document.getElementById("longitude_view").innerHTML;
+        var resultLabel = document.getElementById("results");
+        
+        var found = "";
 
+        if((latVal === '0' && LongVal === '0') || (latVal === '' && LongVal === '')){
+          alert("Please select a location first");
+        }else{
 
+          for(let i = 0; i < PeopleList.length; i ++){
+            var dist = getDist(PeopleList[i].lat, latVal, PeopleList[i].long, LongVal);
+            if(dist <= radius){
+              if(found === ""){
+                found = "@"+PeopleList[i].name;
+              }else{
+                found = found + "  @" + PeopleList[i].name;
+              }
+              
+            }
+          }
+          
+          if(found === ""){
+            found = "No members near you :(";
+          }
 
+          resultLabel.innerText = found;
+        }
+      }
+
+    </script>
 
 
   </body>

@@ -31,6 +31,8 @@
       let markers = [];
       let windows = [];
 
+      let checked = [];
+
       function initMap() {
         map = new google.maps.Map(document.getElementById("map"), {
           center: {
@@ -41,14 +43,32 @@
         });
 
         for(let i =0; i < PeopleList.length; i++){
-          var myLatlng = new google.maps.LatLng(PeopleList[i].lat, PeopleList[i].long);
+          if(checked.length > 0){
+            let mybool = false;
+            for(let j = 0; j < checked.length; j++){
+              if(PeopleList[i].lat === checked[j].lat && PeopleList[i].long === checked[j].long){
+                mybool = true;
+                checked[j].name = checked[j].name + ", " + PeopleList[i].name;
+                break;
+              }
+            }
+            if(!mybool){
+              checked.push({name: PeopleList[i].name, lat: PeopleList[i].lat, long: PeopleList[i].long});
+            }
+          }else{
+            checked.push({name: PeopleList[i].name, lat: PeopleList[i].lat, long: PeopleList[i].long});
+          }
+        }
+
+        for(let i =0; i < checked.length; i++){
+          var myLatlng = new google.maps.LatLng(checked[i].lat, checked[i].long);
           var marker = new google.maps.Marker({
             position: myLatlng,
-            title: PeopleList[i].name
+            title: checked[i].name
             })
 
           var infoWindow = new google.maps.InfoWindow({
-            content:'<h3>'+ PeopleList[i].name+'</h3>'
+            content:'<h3>'+ checked[i].name+'</h3>'
           })
 
           windows.push(infoWindow);

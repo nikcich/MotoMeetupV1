@@ -154,37 +154,33 @@
         var latVal = document.getElementById("latitude_view").innerHTML;
 
         var LongVal = document.getElementById("longitude_view").innerHTML;
-
-
-        var data = {
-          service_id: 'gmail',
-          template_id: 'bigdicks',
-          user_id: 'user_mtIxxJUUhp65VCg4m27S0',
-          template_params: {
-      
+        
+        if((latVal === '0' && LongVal === '0') || (latVal === '' && LongVal === '')){
+          alert("Please enter a location first");
+        }else if(inputVal === ''){
+          alert("Please enter a username first");
+        }else{
+          var data = {
+            service_id: 'gmail',
+            template_id: 'bigdicks',
+            user_id: 'user_mtIxxJUUhp65VCg4m27S0',
+            template_params: {
               'username': inputVal,
               'latv': latVal,
               'longv': LongVal
-          }
-      };
-      
-      $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
-          type: 'POST',
-          data: JSON.stringify(data),
-          contentType: 'application/json'
-      }).done(function() {
-          alert('Your request will be verified before adding');
-      }).fail(function(error) {
-          alert('Oops... ' + JSON.stringify(error));
-      });
-
-
-
-
-
-
-
-
+            }
+          };
+        
+          $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+              type: 'POST',
+              data: JSON.stringify(data),
+              contentType: 'application/json'
+          }).done(function() {
+              alert('Your request will be verified before adding');
+          }).fail(function(error) {
+              alert('Oops... ' + JSON.stringify(error));
+          });
+        }
       }
     </script>
     

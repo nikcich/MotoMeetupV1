@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2cfb47d5c96bf72e8f78ffbf85c670dc",
+    "revision": "03da58d52d929d836814963b14ffd328",
     "url": "/YammieMeetup/index.html"
   },
   {
-    "revision": "5bb2ad2e2db979448841",
-    "url": "/YammieMeetup/static/css/main.3ab04da2.chunk.css"
+    "revision": "67628874b1125d055d80",
+    "url": "/YammieMeetup/static/css/main.c30dff0a.chunk.css"
   },
   {
     "revision": "955c680a9ad1f4dbad4e",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/YammieMeetup/static/js/2.0ca2c46e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5bb2ad2e2db979448841",
+    "revision": "67628874b1125d055d80",
     "url": "/YammieMeetup/static/js/main.3fc32c25.chunk.js"
   },
   {

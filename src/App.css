@@ -102,7 +102,7 @@ body{
 
     #map{
         height: 90vw;
-        width: 90vw;
+        width: 90%;
         border-radius: 2vw;
         position: relative;
         left: 5%;
@@ -137,7 +137,7 @@ body{
         
         border-color: #d72323;
         height: 10vw;
-        width: 50vw;
+        width: 50%;
     }
     
     .latlong-view{
@@ -155,7 +155,7 @@ body{
     
     .submitPart{
         display: flex;
-        width: 100vw;
+        width: 100%;
         justify-content: center;
     }
     

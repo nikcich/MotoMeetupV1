@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
+    <title>Meetup Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -116,9 +116,18 @@
 
     </script>
 
-
+<header>
+  <nav>
+    <ul>
+      <h3>Motorcycle Meetups Member List</h3>
+    </ul>
+  </nav>
+</header>
 
   </head>
+
+  
+
   <body>
     <div id="map"></div>
 
@@ -142,7 +151,7 @@
 
     <div id = "submitPart">
       <input type="text" class="DiscordName" id = "DiscordName" placeholder="Type Discord name with ID (Name#ID)" />
-      <input type="button" class="AddToList" value="Add To List" onclick="sendEmail()"/>
+      <input type="button" class="AddToList" value="Click to Add To List" onclick="sendEmail()"/>
     </div>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
@@ -187,8 +196,13 @@
     <div id = "FindPeople">
       <p><b>--FIND MEMBERS NEAR ME--</b> <span id="myLabel1"></span></p>
       <input type="text" class="Radius" id = "Radius" placeholder="Enter radius in miles" />
-      <input type="button" class="FindPpl" value="Find People" onclick="findPeople()"/>
-      <p><b id = "results">Members will appear here</b> <span id="myLabel2"></span></p>
+      <input type="button" class="FindPpl" value="Click to Find People" onclick="findPeople()"/>
+      <p><b id = "resultLabel">Members will appear here:</b> <span id="myLabel2"></span></p>
+      <p><b id = "results">No members to display</b> <span id="myLabel2"></span></p>
+    </div>
+
+    <div id = "everyone">
+      <h1>Member Meetup Resource Created and Operated by Nik</h1>
     </div>
 
     <script type="text/javascript">

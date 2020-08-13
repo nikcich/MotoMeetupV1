@@ -1,14 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    height: 4vw;
+    width: 100%;
+    background: #278ea5;
+    padding-left: 0;
+    margin-bottom: 3vw;
+    display: flex;
+    justify-content: center;
+}
+  
+h3{
+    font-size: 3.5vw;
+    display: inline;
+    padding: 1vw 1vw 1vw 1vw;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    text-align: center;
+    align-self: center;
+}
+  
+nav ul li a{
+    color: white;
+}
+
 #map{
     height: 30vw;
     width: 90vw;
-    border-radius: 2vw;
+    border-radius: 1.5vw;
 
     position: relative;
     left: 5%;
 }
 
 body{
-    background-color: #1d1a1a;
+    font-family: "Arial", "Helvetica", "sans-serif";
+    background-image: linear-gradient(to bottom, #071e3d, #1f4287, #278ea5);
+    
 }
 
 .latlong-view{
@@ -17,6 +49,7 @@ body{
 
 .form-group{
     padding-top: 2vw;
+    padding-bottom: 2vw;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -33,10 +66,10 @@ body{
 .form-group input{
     font-size: 1vw;
     background-color: #f5eded;
-    border-radius: 1vw;
+    border-radius: 2vw;
     border-width: 0.3vw;
     
-    border-color: #d72323;
+    border-color: #21e6c1;
     width: 30vw;
 }
 
@@ -44,7 +77,8 @@ body{
     width: 100%;
     display: flex;
     justify-content: center;
-    padding-top: 1vw;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
 }
 
 .latlong-view p{
@@ -64,24 +98,25 @@ body{
     height: 3vw;
     width: 80%;
     border-width: 0.3vw;
-    border-radius: 1vw;
+    border-radius: 2vw;
     font-size: 2vw;
     text-align: center;
-    border-color: #d72323;
+    border-color: #21e6c1;
     margin-left: 9.5%;
+    margin-top: 1vw;
 }
 
 .AddToList{
-    
     margin-top: 1vw;
-    margin-left: 10%;
+    margin-left: 25%;
     height: 3vw;
-    width: 80%;
+    width: 50%;
     border-width: 0.3vw;
-    border-radius: 1vw;
-    border-color: #d72323;
+    border-radius: 2vw;
+    border-color: #21e6c1;
     font-size: 2vw;
     text-align: center;
+    margin-bottom: 1vw;
 }
 
 .AddToList:hover{
@@ -92,6 +127,7 @@ body{
     display: flex;
     width: 100vw;
     justify-content: center;
+    
 }
 
 #FindPeople p{
@@ -101,31 +137,35 @@ body{
     margin-right: 3vw;
     margin-left: 3vw;
     margin-top: 4vw;
+    margin-bottom: 4vw;
 }
-
 
 .Radius{
     display: flex;
     height: 3vw;
     width: 80%;
     border-width: 0.3vw;
-    border-radius: 1vw;
+    border-radius: 2vw;
     font-size: 2vw;
     text-align: center;
-    border-color: #d72323;
+    border-color: #21e6c1;
     margin-left: 9.5%;
 }
 
 .FindPpl{
     margin-top: 1vw;
-    margin-left: 10%;
+    margin-left: 25%;
     height: 3vw;
-    width: 80%;
+    width: 50%;
     border-width: 0.3vw;
-    border-radius: 1vw;
-    border-color: #d72323;
+    border-radius: 2vw;
+    border-color: #21e6c1;
     font-size: 2vw;
     text-align: center;
+}
+
+.FindPpl:hover{
+    background-color: #7e7a7a;
 }
 
 b{
@@ -133,16 +173,25 @@ b{
 }
 
 
+.everyone{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    
+}
 
-
-
-
-
-
+#everyone h1{
+    font-size: 0.7vw;
+    color: #ffffff;
+    text-align: center;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    margin-top: 4vw;
+    margin-bottom: 2vw;
+}
 
 @media only screen and (max-width: 1500px) {
     
-
 
     #map{
         height: 90vw;
@@ -153,6 +202,7 @@ b{
     }
     
     body{
+        font-family: "Arial", "Helvetica", "sans-serif";
         background-color: #1d1a1a;
     }
     
@@ -176,10 +226,10 @@ b{
     .form-group input{
         font-size: 3vw;
         background-color: #f5eded;
-        border-radius: 2vw;
-        border-width: 0.3vw;
+        border-radius: 10vw;
+        border-width: 1vw;
         
-        border-color: #d72323;
+        border-color: #21e6c1;
         height: 10vw;
         width: 50%;
     }
@@ -207,26 +257,26 @@ b{
         display: flex;
         height: 12vw;
         width: 90%;
-        border-width: 0.3vw;
-        border-radius: 1vw;
+        border-width: 0.75vw;
+        border-radius: 10vw;
         font-size: 5vw;
         text-align: center;
-        border-color: #d72323;
+        border-color: #21e6c1;
         margin-left: 4%;
         
     }
     
     .AddToList{
-        display: flex;
         margin-top: 5vw;
         margin-left: 5%;
         text-align: center;
         height: 12vw;
         width: 90%;
-        border-width: 0.3vw;
-        border-radius: 1vw;
-        border-color: #d72323;
+        border-width: 0.75vw;
+        border-radius: 10vw;
+        border-color: #21e6c1;
         font-size: 5vw;
+        
     }
     
     .AddToList:hover{
@@ -257,22 +307,22 @@ b{
         display: flex;
         height: 5.5vw;
         width: 90%;
-        border-width: 0.3vw;
-        border-radius: 1vw;
+        border-width: 0.75vw;
+        border-radius: 10vw;
         font-size: 5vw;
         text-align: center;
-        border-color: #d72323;
+        border-color: #21e6c1;
         margin-left: 4.5%;
     }
     
     .FindPpl{
         margin-top: 1vw;
-        margin-left: 5%;
+        margin-left: 5.5%;
         height: 6vw;
         width: 90%;
-        border-width: 0.3vw;
-        border-radius: 1vw;
-        border-color: #d72323;
+        border-width: 0.75vw;
+        border-radius: 10vw;
+        border-color: #21e6c1;
         font-size: 4vw;
         text-align: center;
     }
@@ -282,5 +332,21 @@ b{
         word-wrap: break-word;
     }
 
+    .everyone{
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        
+    }
+    
+    #everyone h1{
+        font-size: 2vw;
+        color: #ffffff;
+        text-align: center;
+        margin-right: 3vw;
+        margin-left: 3vw;
+        margin-top: 4vw;
+        margin-bottom: 2vw;
+    }
 }
 

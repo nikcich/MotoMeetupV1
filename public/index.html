@@ -119,7 +119,7 @@
 <header>
   <nav>
     <ul>
-      <h3>Motorcycle Meetups Member List</h3>
+      <h3 id = "headh">Motorcycle Meetups Member List</h3>
     </ul>
   </nav>
 </header>
@@ -152,6 +152,7 @@
     <div id = "submitPart">
       <input type="text" class="DiscordName" id = "DiscordName" placeholder="Type Discord name with ID (Name#ID)" />
       <input type="button" class="AddToList" value="Click to Add To List" onclick="sendEmail()"/>
+      <h1 class = "MayTake">Can take up to a day to process request</h1>
     </div>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
@@ -201,8 +202,102 @@
       <p><b id = "results">No members to display</b> <span id="myLabel2"></span></p>
     </div>
 
+
+
+
+
+    <div id = "advert">
+      <h3>---Upcoming Member Rides---</h3>
+
+      <h2>Location: N/A</h2>
+      <h2>Date: N/A</h2>
+      <h2 id = "bottomh2">Host: N/A</h2>
+
+      <h2>Request to Host a Meet</h2>
+      <input type="text" class="form-control2" id="search_input2" placeholder="Type meetup address..." />
+
+      <div class="latlong-view2">
+        <p><b>Location:</b> <span id="addy_view2"></span></p>
+      </div>
+      <input type="text" class="Radius" id = "HostName" placeholder="Enter hosts Discord name with ID (Name#ID)" />
+      <input type="text" class="date" id = "DateBox" placeholder="Enter the date and time (12:00pm MM/DD/YY)" />
+      <input type="button" class="FindPpl" value="Click to request meetup ad" onclick="requestMeet()"/>
+
+
+    </div>
+
+    <script>
+      function requestMeet(){
+
+        var addy = document.getElementById('addy_view2').innerHTML;
+        var datetime = document.getElementById('DateBox').value;
+        var hoster = document.getElementById('HostName').value;
+        
+        
+        
+        if(addy === '' || datetime === '' || hoster === ''){
+          alert("Please enter all the data first");
+        }else{
+          var data = {
+            service_id: 'gmail',
+            template_id: 'template_P549kwWX',
+            user_id: 'user_mtIxxJUUhp65VCg4m27S0',
+            template_params: {
+              'hoster': hoster,
+              'date': datetime,
+              'addy': addy
+            }
+          };
+        
+          $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+              type: 'POST',
+              data: JSON.stringify(data),
+              contentType: 'application/json'
+          }).done(function() {
+              alert('Your request will be verified before adding');
+          }).fail(function(error) {
+              alert('Oops... ' + JSON.stringify(error));
+          });
+        }
+
+
+
+
+      }
+    </script>
+
+    <script>
+      var searchInput = 'search_input2';
+
+      $(document).ready(function () {
+          var autocomplete;
+          autocomplete = new google.maps.places.Autocomplete((document.getElementById(searchInput)), {
+              types: ['geocode'],
+          });
+        
+          google.maps.event.addListener(autocomplete, 'place_changed', function () {
+              var near_place = autocomplete.getPlace();
+              var addy2 = "";
+              for(let i =0; i < near_place.address_components.length; i++){
+                addy2 = addy2 + " " + near_place.address_components[i].long_name;
+              }
+              document.getElementById('addy_view2').innerHTML = addy2;
+              //near_place.geometry.location.lng();
+          });
+      });
+
+      $(document).on('change', '#'+searchInput, function () {
+          document.getElementById('addy_view2').innerHTML = 'N/A';
+      });
+
+    </script>
+
+
+
+
     <div id = "everyone">
       <h1>Member Meetup Resource Created and Operated by Nik</h1>
+      
     </div>
 
     <script type="text/javascript">

@@ -87,6 +87,21 @@ body{
     margin-left: 3vw;
 }
 
+.country-view{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+}
+
+.country-view p{
+    font-size: 2vw;
+    color: white;
+    margin-right: 3vw;
+    margin-left: 3vw;
+}
+
 .submitPart{
     display: flex;
     width: 100vw;

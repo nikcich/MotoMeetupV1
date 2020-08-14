@@ -498,6 +498,22 @@
 
               document.getElementById('latitude_view').innerHTML = near_place.geometry.location.lat();
               document.getElementById('longitude_view').innerHTML = near_place.geometry.location.lng();
+
+              let countryname = "";
+
+              if(near_place.address_components.length === 4){
+                countryname = near_place.address_components[4-1].long_name;
+              }else if(near_place.address_components.length === 5){
+                countryname = near_place.address_components[5-1].long_name;
+              }else if(near_place.address_components.length === 3){
+                countryname = near_place.address_components[3-1].long_name;
+              }else if(near_place.address_components.length === 2){
+                countryname = near_place.address_components[2-1].long_name;
+              }else{
+                countryname = 'N/A';
+              }
+
+              document.getElementById('whatCountry').innerHTML = countryname;
               
           });
       });
@@ -505,6 +521,7 @@
       $(document).on('change', '#'+searchInput1, function () {
         document.getElementById('latitude_view').innerHTML = '0';
         document.getElementById('longitude_view').innerHTML = '0';
+        document.getElementById('whatCountry').innerHTML = 'N/A';
       });
 
 
@@ -540,7 +557,14 @@
     <div class="latlong-view">
       <p><b>Latitude:</b> <span id="latitude_view"></span></p>
       <p><b>Longitude:</b> <span id="longitude_view"></span></p>
+      
     </div>
+
+    <div class="country-view">
+      <p><b>Country:</b> <span id="whatCountry"></span></p>
+    </div>
+
+    
 
 
     <div id = "submitPart">
@@ -561,6 +585,8 @@
         var latVal = document.getElementById("latitude_view").innerHTML;
 
         var LongVal = document.getElementById("longitude_view").innerHTML;
+
+        var countryName = document.getElementById('whatCountry').innerHTML
         
         if((latVal === '0' && LongVal === '0') || (latVal === '' && LongVal === '')){
           alert("Please enter a location first");
@@ -575,7 +601,8 @@
               'username': inputVal,
               'bike': bikeVal,
               'latv': latVal,
-              'longv': LongVal
+              'longv': LongVal,
+              'country':countryName
             }
           };
         
@@ -680,6 +707,7 @@
                 addy2 = addy2 + " " + near_place.address_components[i].long_name;
               }
               document.getElementById('addy_view2').innerHTML = addy2;
+              
               console.log(near_place.address_components);
               //near_place.geometry.location.lng();
           });

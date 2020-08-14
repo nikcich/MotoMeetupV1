@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/YammieMeetup/static/css/main.fccbdd30.chunk.css",
+    "main.css": "/YammieMeetup/static/css/main.57fb7fd5.chunk.css",
     "main.js": "/YammieMeetup/static/js/main.3fc32c25.chunk.js",
     "main.js.map": "/YammieMeetup/static/js/main.3fc32c25.chunk.js.map",
     "runtime-main.js": "/YammieMeetup/static/js/runtime-main.19c5013d.js",
@@ -8,15 +8,15 @@
     "static/js/2.0ca2c46e.chunk.js": "/YammieMeetup/static/js/2.0ca2c46e.chunk.js",
     "static/js/2.0ca2c46e.chunk.js.map": "/YammieMeetup/static/js/2.0ca2c46e.chunk.js.map",
     "index.html": "/YammieMeetup/index.html",
-    "precache-manifest.1ebf20623b0c93357b378e2579e39eb5.js": "/YammieMeetup/precache-manifest.1ebf20623b0c93357b378e2579e39eb5.js",
+    "precache-manifest.6439155ed4c889041e56a2b2b1105cb1.js": "/YammieMeetup/precache-manifest.6439155ed4c889041e56a2b2b1105cb1.js",
     "service-worker.js": "/YammieMeetup/service-worker.js",
-    "static/css/main.fccbdd30.chunk.css.map": "/YammieMeetup/static/css/main.fccbdd30.chunk.css.map",
+    "static/css/main.57fb7fd5.chunk.css.map": "/YammieMeetup/static/css/main.57fb7fd5.chunk.css.map",
     "static/js/2.0ca2c46e.chunk.js.LICENSE.txt": "/YammieMeetup/static/js/2.0ca2c46e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.19c5013d.js",
     "static/js/2.0ca2c46e.chunk.js",
-    "static/css/main.fccbdd30.chunk.css",
+    "static/css/main.57fb7fd5.chunk.css",
     "static/js/main.3fc32c25.chunk.js"
   ]
 }

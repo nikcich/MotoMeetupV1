@@ -297,6 +297,10 @@ b{
         display: flex;
         justify-content: center;
     }
+
+    h3{
+        font-size: 4vw;
+    }
       
     header h3{
         font-size: 4vw;

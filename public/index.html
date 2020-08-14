@@ -20,13 +20,12 @@
       "use strict";
 
       let map;
-      //let person = {name: "", lat: , long: };
-      let nikolas = {name: "Nikolas#9362", lat: 33.1031744, long:-96.67055030000002};
-      let yammie = {name: "yammienoob#7923", lat: 30.267153,long: -97.7430608};
-      let spite = {name: "Spite#2151", lat: 30.267153,long: -97.7430608};
-      let CloutRangerRusty = {name: "CloutRangerRusty#6689", lat:41.6000317 , long: -87.9381112};
+      //let person = {name: "", lat: , long: , bike: ""};
+      let nikolas = {name: "Nikolas#9362", lat: 33.1031744, long:-96.67055030000002, bike: "2017 Z650"};
+      let yammie = {name: "yammienoob#7923", lat: 30.267153,long: -97.7430608, bike: "2007 HAYABUSA"};
+      let spite = {name: "Spite#2151", lat: 30.267153,long: -97.7430608, bike: "KTM SMCR"};
+      let CloutRangerRusty = {name: "CloutRangerRusty#6689", lat:41.6000317 , long: -87.9381112, bike: "1984 Nighthawk"};
 
-      console.log(nikolas.name);
       let PeopleList = [nikolas, yammie, spite, CloutRangerRusty];
 
       let markers = [];
@@ -283,15 +282,15 @@
             for(let j = 0; j < checked.length; j++){
               if(PeopleList[i].lat === checked[j].lat && PeopleList[i].long === checked[j].long){
                 mybool = true;
-                checked[j].name = checked[j].name + ", " + PeopleList[i].name;
+                checked[j].name = checked[j].name + ", " + PeopleList[i].name  + " ("+ PeopleList[i].bike + ")";
                 break;
               }
             }
             if(!mybool){
-              checked.push({name: PeopleList[i].name, lat: PeopleList[i].lat, long: PeopleList[i].long});
+              checked.push({name: PeopleList[i].name  + " ("+ PeopleList[i].bike + ")", lat: PeopleList[i].lat, long: PeopleList[i].long});
             }
           }else{
-            checked.push({name: PeopleList[i].name, lat: PeopleList[i].lat, long: PeopleList[i].long});
+            checked.push({name: PeopleList[i].name + " ("+ PeopleList[i].bike + ")", lat: PeopleList[i].lat, long: PeopleList[i].long});
           }
         }
 
@@ -389,6 +388,7 @@
 
     <div id = "submitPart">
       <input type="text" class="DiscordName" id = "DiscordName" placeholder="Type Discord name with ID (Name#ID)" />
+      <input type="text" class="biketype" id = "biketype" placeholder="Enter your bike (2017 GSX1300R HAYABUSA)" />
       <input type="button" class="AddToList" value="Click to Add To List" onclick="sendEmail()"/>
       <h1 class = "MayTake">Can take up to a day to process request</h1>
     </div>
@@ -398,6 +398,8 @@
       function sendEmail() {
         
         var inputVal = document.getElementById("DiscordName").value;
+
+        var bikeVal = document.getElementById("biketype").value;
 
         var latVal = document.getElementById("latitude_view").innerHTML;
 
@@ -414,6 +416,7 @@
             user_id: 'user_mtIxxJUUhp65VCg4m27S0',
             template_params: {
               'username': inputVal,
+              'bike': bikeVal,
               'latv': latVal,
               'longv': LongVal
             }

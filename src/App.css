@@ -106,6 +106,19 @@ body{
     margin-top: 1vw;
 }
 
+.biketype{
+    display: flex;
+    height: 3vw;
+    width: 70%;
+    border-width: 0.3vw;
+    border-radius: 2vw;
+    font-size: 2vw;
+    text-align: center;
+    border-color: #21e6c1;
+    margin-left: 15%;
+    margin-top: 1vw;
+}
+
 .AddToList{
     margin-top: 1vw;
     margin-left: 25%;
@@ -386,8 +399,20 @@ b{
         font-size: 5vw;
         text-align: center;
         border-color: #21e6c1;
-        margin-left: 4%;
-        
+        margin-left: 4%; 
+    }
+
+    .biketype{
+        display: flex;
+        height: 12vw;
+        width: 90%;
+        border-width: 0.75vw;
+        border-radius: 10vw;
+        font-size: 5vw;
+        text-align: center;
+        border-color: #21e6c1;
+        margin-left: 4%; 
+        margin-top: 4vw;
     }
     
     .AddToList{
